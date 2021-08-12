@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Root_Wang</title>
+    <script>
+        /*
+        * 强制类型数据转换
+        * 将其他数据类型转换成
+        *   -String Number Boolean
+        */
+        //let a = undefined;
+        //let b = a.toString();/报错
+        let a = null;
+        //let b = a.toString();/报错
+        /*
+        *  方式一：
+        *       -调用被转换数据类型的toString()方法
+        *       -不改变a的属性只是将转换的结果作为返回值
+        *       -null undefined 没有toString()方法
+        */
+        //调用a的toString()方法
+        //调用xxx的yyy方法 就是 xxx.yyy()
+        /*
+        * 方法二：
+        *   -调用String()函数
+        *   -对于Number 和 Boolean 实际底层调用的依然是toString()方法
+        *   -对于null 和undefined  不调用toString()方法
+        *   - 将null 直接转换为 "null"
+        *     将undefined 直接转换为 "undefined"
+        */
+        let c = String(a);
+        //a.toString();
+        //let b = a.toString();
+        console.log(typeof a);
+        console.log(a);
+        console.log(typeof c);
+        console.log(c)
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

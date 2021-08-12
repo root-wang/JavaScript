@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+      /*
+       * 数据类型就是子面量的类型
+       * 在JS中有6中类型
+       *        String
+       *        Number
+       *        Boolean
+       *        Null  空值
+       *        Undefined   未定义
+       *        Object   对象（引用数据类型）
+       */
+      /*
+       *  String 字符串
+       *  - 使用引号引起来
+       */
+      let str;
+      str = "he said ' u are nice'"
+      /*
+       *  \转义字符 进行 对特殊符号转义
+       */
+      str = "he said \\\"u are nice\"   \t so what";
+      //alert(str);
+      /*
+       * Number
+       * NaN 不是数字类型就返回NaN值
+       * isNaN("123") ;
+       * isNaN(123);
+       */
+      const a =0.2;
+      let b ="123";
+      /*
+       * typeof 检查数据类型
+       * Infinity 正无穷
+       */
+      //console.log(isNaN(a));
+      //console.log(isNaN("b"/3));
+      //Number.MAX_VALUE最大值
+      //console.log(Number.MAX_VALUE*Number.MIN_VALUE);
+      /*
+       *  Null
+       *  检测后返回 为空的对象
+       *  object
+       */
+      const a_2 =null
+      /*
+       *    Undefined
+       *    声明一个变量不赋值就是Undefined
+       */
+      let a_1;
+      /*console.log(typeof a_2);
+      console.log(a_2);
+      console.log(a_1);
+      console.log(typeof a_1);*/
+      /*
+       * Object
+       */
+       //const Obj = new Object();
+       /*let Obj ={
+          m_Name : 'Bob',
+          m_number : 1234,
+          getNumber:function (){
+              alert(this.m_number);
+          },
+          objNext:{
+              m_nextNumber : 1235
+          }
+      };*/
+      //console.log(Obj.m_Name);
+      //console.log(Obj.m_number);
+      //console.log(Obj.getNumber());
+      //console.log(Obj.objNext);
+      //console.log(Obj.objNext.m_nextNumber);
+      const reverse = function (x) {
+          let rev = 0;
+          while (x !== 0) {
+              const digit = x % 10;
+              x = ~~(x / 10);//去除小数部分，~是按位与，每次操作完后变成整数部分，两次后保留下来
+              //原始数据的整数部分
+              rev = rev * 10 + digit;
+              if (rev < Math.pow(-2, 31) || rev > Math.pow(2, 31) - 1) {
+                  return 0;
+              }
+          }
+          return rev;
+      };
+      console.log(reverse(123));
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

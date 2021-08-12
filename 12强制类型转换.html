@@ -11,7 +11,7 @@
         */
         //let a = undefined;
         //let b = a.toString();/报错
-        let a = null;
+        //let a = null;
         //let b = a.toString();/报错
         /*
         *  方式一：
@@ -23,21 +23,87 @@
         //调用xxx的yyy方法 就是 xxx.yyy()
         /*
         * 方法二：
-        *   -调用String()函数
-        *   -对于Number 和 Boolean 实际底层调用的依然是toString()方法
-        *   -对于null 和undefined  不调用toString()方法
-        *   - 将null 直接转换为 "null"
-        *     将undefined 直接转换为 "undefined"
+        *       -调用String()函数
+        *       -对于Number 和 Boolean 实际底层调用的依然是toString()方法
+        *       -对于null 和undefined  不调用toString()方法
+        *       - 将null 直接转换为 "null"
+        *       - 将undefined 直接转换为 "undefined"
         */
-        let c = String(a);
+        //let c = String(a);
         //a.toString();
         //let b = a.toString();
-        console.log(typeof a);
+       /* console.log(typeof a);
         console.log(a);
         console.log(typeof c);
-        console.log(c)；
-        this.Math
+        console.log(c);*/
+        function resever(n){
+            let res=0;
+            while (n != 0) {
+                let sight = n % 10;
+                //n = ~~(n / 10);
+                n= parseInt( n / 10 );
+                res = res * 10 + sight;
+            }
+            return res;
+        }
+        //console.log(resever(12324))
+        /*
+        *   强制数据类型转换为Number
+        *       方式一：
+        *           --使用Number()函数
+        *              1、如果是纯数字就转换为数字，
+        *              2、如果不是纯数字则转换为NaN
+        *              3、如果是"  " 是空串或全是空格则转换为0
+        *              --布尔转数字
+        *                true=>1;false=>;
+        *              --null转数字
+        *                null=>0;
+        *
+        */
+        let a = "123";//必需都是数字
+        //新要求只转换字符串中数字
+        let b = Number(a);//调用Number()函数转换
+        //console.log(a);
+        //console.log(b);
+        //a = null;
+        //console.log(Number(a));
+        /*
+        *   方法二：
+        *         -只用来转换字符串中的数字部分
+        *         -parseInt() 把一个字符串转换为数字
+        *         -parseFloat()
+        */
+        a = "123px"//123
+        //a = "p123da"//NaN
+        //a = "123af123"//123
+        a = parseInt(a,8);//parseInt(x,base) base:进制
+        /*
+         *
+         */
+        //console.log(a);
+        let c = ".123.a";//0.123
+        c = parseFloat(c);//从左向右读取数字和小数点
+        //console.log(c);
+        let d = true;//NaN
+        d = parseInt("true");
+        //console.log(d);
 
+        /*
+        *  parseInt(021, 8) return 15??;
+        *  parseInt(15.99, 10)return 15??;
+        * */
+        let str = "015";
+        str = parseInt(0o21,8);//=parseInt("17",8);
+        //let num = String(0o21);
+        num = 0o21.toString();
+        /*
+            首先将八进制数字0o21通过toString()转换为字符串，而函数toString()对于纯数字的转换应当是
+            按照十进制转换所以0o21(8)应该是17(10)，这个17(10)就会转换为'17'字符串，
+            再通过parseInt()转换是指定的八进制所以就是17(8)=15(10)
+        */
+        console.log(num);
+        //str = parseFloat(15.99,10);
+        console.log(str);
     </script>
 </head>
 <body>

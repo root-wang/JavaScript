@@ -12,6 +12,23 @@
     *   */
     let a =123;
     let result = typeof a;
+    let str = "1234\n" +
+              "5678\n" +
+              "101010\n";
+    str = "123" + 123;//all is string
+    str = "123" + true;//123true string
+    str = "123" + undefined;//123undefined
+    str = 123;
+    console.log(typeof str);
+    console.log(str);
+    console.log("str="+str)//+ null
+    console.log("str=" + typeof (str+""))//number 转换为 string
+    /*
+    * 任意数据类型加上一个空串不能有空格
+    * 或者加上null 转换为字符串
+    * 是一种隐式转换
+    * 实际上也是调用String()
+    */
   </script>
 </head>
 <body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    /*
+    * 一元运算符，只要一个操作数
+    *  + 正号  隐式数据类型转换 将任何非Number转换为Number类型数据
+    *   我认为该方法底层依旧是调用了函数Number()
+    *   函数Number()以及parseInt()
+    *   包括函数parseInt()对于纯数字的字符串也是使用的函数Number();
+    *  - 负号  对Number数据取反
+    *         对非Number数据 先转换为NUmber再取反运算 比如Boolean数据
+    *         纯数字的String*/
+    let a="123";
+    a = +a;
+    /*console.log(typeof a);
+    console.log("a = "+a);*/
+    let result = Number()//+'123.21';
+    console.log(typeof result);
+    console.log(result);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

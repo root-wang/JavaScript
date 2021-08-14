@@ -1,5 +1,10 @@
 <component name="CopyrightManager">
   <settings>
-    <LanguageOptions name="JavaScript" />
+    <LanguageOptions name="JavaScript">
+      <option name="addBlankBefore" value="true" />
+      <option name="separateBefore" value="true" />
+      <option name="separateAfter" value="true" />
+      <option name="prefixLines" value="false" />
+    </LanguageOptions>
   </settings>
 </component>

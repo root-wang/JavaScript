@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    let a = 10;
+    //console.log(a);
+    /*
+    * 关系运算符
+    * > 大于号
+    * -如果关系成立则返回true 否则返回false
+    * 非数值情况 */
+    //console.log(true >= 1);
+    //console.log(true >= '0');//对非数值进行比较是会转换为数值比较
+    console.log('11' > '5');//如果两侧都是字符串则比较的是两侧字符串中的unicode编码不是数学上的数字大小
+    console.log('11' > +'5');//对一个字符串进行转型
+    console.log('abc' > 'a');//如果前一位一样则比较下一位
+    /*
+    * 借用这个方式对英文进行排序
+    * 对中文可以进行拼音排序
+    * 完善通讯论*/
+
+    //console.log(true > NaN);//任何和NaN作比较都是false
+    //console.log(Number(''));
+    //console.log(false >= null)
+  </script>
+</head>
+<body>
+
+</body>
+</html>

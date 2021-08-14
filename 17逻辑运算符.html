@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    /*
+    * ! 非
+    *  -可以对一个值进行非运算
+    *  -两次取反值不会变化
+    *  -对非布尔值进行运算会转换为布尔值再取反运算
+    * && 与
+    * || 或*/
+    let a = -10;
+    let b = 0;
+    let c = !!a && !!b;
+    //c = true || alert("haello");//no alert
+    //c = false || alert("hello");//alert
+    //c = true && alert("hello");//alert
+    c = false && alert("hello");//no alert
+    //console.log("c = " + c);
+    /*
+    * && || 对于非布尔值的运算结果为布尔值但是返回的结果是原数据类型
+    * */
+    var result = 1 && 2;//return 2;
+    result = 1 && 0;//return 2;
+    result = 0 && NaN;
+    //result = 1 || 2;//return 1;
+    /*
+    * 对于&& || 来说去判断该表达式的值返回的是
+    * 判断结束时的最后判断的数据
+    * && 判断到false就结束所以返回false的值，如果第一个
+    * 值是true 则去判断第二个值所以返回的是第二个值*/
+    console.log(result);
+    /*
+    * 可以利用&& 和 || 来表述一些逻辑关系的先后顺序
+    * 通过这些逻辑运算符来直接关联但逻辑内容爆炸
+            */
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -24,7 +24,7 @@
     * */
     var result = 1 && 2;//return 2;
     result = 1 && 0;//return 2;
-    result = 0 && NaN;
+    result = 1 && undefined;
     //result = 1 || 2;//return 1;
     /*
     * 对于&& || 来说去判断该表达式的值返回的是
@@ -35,7 +35,7 @@
     /*
     * 可以利用&& 和 || 来表述一些逻辑关系的先后顺序
     * 通过这些逻辑运算符来直接关联但逻辑内容爆炸
-            */
+    */
   </script>
 </head>
 <body>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    let a = ' ';//非空字符串布尔值为true但是数据类型不是boolean而是string
+    a = '';//空字符串初始的布尔值为false
+    let b;//类型依旧是undefined但是布尔值是false
+    /*
+    * '' null 0 -0 undefined false的初始布尔值都是false
+    *  除此之外的所有数据都是布尔值为true的数据
+    */
+    console.log(typeof b);
+    console.log(!!b);
+    console.log(typeof !!b);
+  </script>
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>

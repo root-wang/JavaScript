@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    var obj1=new Object();
+    obj1.name="bob";
+    obj1.var = "root";
+    //obj2.123 = 345;
+    //console.log(obj2.123);
+    obj1[123]=245;
+    var n = 123;//用[]可以用变量来代替同一对象的不同属性名
+    console.log(obj1[n]);
+    //对象属性名可以随便起
+    //特殊名字由[]包括
+
+    /*
+    * 属性值
+    *  JS对象的属性值可以是任何数据类型
+    * 也可以是一个对象
+    */
+    obj1.test = 123;
+    var obj2 = {};
+    obj2.name = "jack";
+    obj1.test= obj2;
+
+    //console.log(obj1.test.name);
+    console.log(obj1.test2);
+    //检查对象里含有什么对象属性
+    // in 运算符
+    //       -通过该运算符可以检查一个对象中是否含有指定属性
+    //        返回值布尔类型
+    //       -语法:  "属性名" in 对象
+    console.log("test2" in obj2);
+    console.log("name" in obj2);
+    console.log("log" in console);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

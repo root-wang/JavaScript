@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <SCRIPT>
+    //基本数据类型
+    //在栈内存中保存
+    //值与值之间独立存在 修改其他变量不影响当前变量
+    var a=1;
+    var b=a;//不跟随后续a的变化而变化
+    a++;
+    //console.log(a);
+    //console.log(b);
+
+    //引用数据类型
+    //对象保存到堆内存中
+    //在内存中开辟一个内存地址来保存对象
+    //而变量保存的式内存地址不是对象 就是引用变量
+    //每次添加改变对象变量实际是在改变内存中的对象
+    //使用新的变量保存对象是保存的同一地址
+    //也就是两个变量都是去访问内存中的同一地址的对象
+    var obj1={};
+    var obj2 = obj1;//跟随obj1后续的改变而改变
+    obj1.name="jack";
+    obj2=null;//相当于与内存中的对象断开连接
+    console.log(obj2);
+    console.log(obj1.name);
+
+    var obj3={};
+    var obj4={};
+    obj3.name="jack";
+    obj4.name="jack";
+    console.log(obj3 == obj4);//采用堆内存 所以两个对象的开辟在内存中的地址不一样
+    console.log(obj4.name == obj3.name);//true 两个的数据类型一样 值也一样
+    //实际依然是基本数据类型的相等
+  </SCRIPT>
+</head>
+<body>
+
+</body>
+</html>

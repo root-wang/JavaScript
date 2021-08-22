@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    function sum(a, b, c) {
+      //alert(a + b + c);
+      //return a+b+c;//可以跟任意类型的值
+      return;//返回一个undefined
+    }
+
+    var b = sum(1, 2, 3);
+    //console.log(b);
+
+    //var result=alert("hello");//无返回值
+    //console.log(typeof result);//undefined
+
+    function isOU(num) {
+      /*if(num%2==0)return true;
+      else return false;*/
+      return num % 2 == 0;
+    }
+
+    //console.log(isOU(3));
+
+    function square(r){
+      return 3.14*r*r;
+    }
+    //console.log(square(10));
+    function sayhello(obj){
+      console.log("i am "+obj.name+" i am "+obj.age+" i am "+obj.sex);
+    }
+    var obj={
+      name : "bob",
+      age : 13,
+      sex : "man"
+    }
+    //sayhello(obj);
+    //实参可以是一个对象 也可以是一个函数
+    function fun(a){
+      console.log("a = "+ a);
+    }
+    fun(square(13));//调用函数 相当于把函数返回值作为了实参
+    fun(square);//函数对象 相当于直接使用函数对象
+  </script>
+</head>
+<body>
+
+</body>
+</html>

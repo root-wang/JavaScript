@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    var kkk = "re3";
+    var sss = "gfh";
+    var obj = {
+      name : "bob",
+      age :13,
+      [kkk] : "jhj",//qwe
+      gender : "man",
+      [sss] : "432",//343
+      adress : "hongkong"
+    };
+    /*枚举对象中的属性
+    * 使用for ... in 语句
+    *   语法：
+    *     for(var 变量 in 对象){
+    *
+    *     }
+    *   在for ... in 语句中对象有几个属性循环几次
+    *   每次执行时会将对象中的属性的名称赋值给变量
+    */
+    for(var i in obj){
+        console.log(i);
+        //console.log(obj.i);//虽然将属性名称赋值给了变量i但是对象
+      //中并没有这个i的属性 就好比是将
+     /*  var str = 123;
+       var obj={
+         [str] : "ew",
+      }*/
+      //对象中并没没有123但是有str 需要使用中括号
+        console.log(obj[i]);
+        /*
+        * 如果在对象的定义中首先使用了特殊命名法 使用中括号[]来
+        * 代替 那么在循环检查中的话首先其真实属性名称
+        * 是纯数字的
+        */
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

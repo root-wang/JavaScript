@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    /*
+    * 作用域
+    *   - 指一个变量的作用范围
+    *   - 在JS中有两种作用域
+    *       1.全局作用域
+    *           -直接编写在script标签里的JS代码
+    *           都在全局作用
+    *           - 在页面打开时创建 在关闭页面是销毁
+    *           - 在全局作用域中有一个全局对象window，
+    *             代表是浏览器的窗口可以直接使用
+    *           - 在全局创建的变量都会作为window对象的属性保存
+    *             创建的函数都作为window的方法保存
+    *       2.*/
+
+    var a = 10;//保存在window对象属性中
+    //console.log(window.a);
+    function fun(){
+      console.log("123");
+    }
+    window.fun();
+    //window.alert("123");
+
+    /*
+    * 变量声明提前
+    *     -使用关键字var声明变量，会在所有代码执行之前执行
+    *       但是不会赋值 是undefined
+    *       如果不使用关键字var 不会提前
+    * */
+    console.log("a = "+a);
+    var a= 10;
+
+    fun();
+    fun2();//函数声明未被初始化
+    function fun(){
+      console.log("i am fun ");
+    }
+    //函数声明
+    //  -使用function函数声明形式创建的函数会
+    //   在所有代码执行之前就被创建和初始化
+    //   在函数声明前就可以调用函数
+
+
+    var fun2=function (){
+      console.log("i am fun2");
+    }
+    //函数表达式  变量fun2会提前声明
+    //但是不会提前赋值  所以不可以在声明之前调用
+  </script>
+</head>
+<body>
+
+</body>
+</html>

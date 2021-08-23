@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    /*
+    * 函数作用域
+    *      -调用时创建函数作用域，函数执行完毕后
+    *       函数作用域销毁
+    *      - 每调用一次函数都会创建一次函数作用域
+    *         每次作用域相互独立
+    *      -在函数作用域中可以访问全局变量
+    *       可以使用window对象来访问全区变量*/
+
+    var a =10 ;//全局变量
+
+    function fun(){
+      var b =10;
+      var a = 20;
+      console.log("a = " +window.a);//访问函数中的a
+      //在函数作用域中访问变量，会先在自身作用域中寻找
+      //如果存在则使用函数作用域中，否则向上一级寻找
+      //如果全局作用域没有就会报错
+    }
+    //fun();
+    //console.log("a = "+ a);
+    //console.log("b = "+b);
+    // 无法访问函数作用域中的变量
+
+    function fun3(){
+      c=45;
+      console.log("c = "+c);
+      var c=34;
+    }
+    fun3();
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,4 +1,10 @@
-# JavaScript第一次小姐
+___
+title: JavaScript第一次小姐
+toc: true
+tags: -JavaScript
+-学习笔记
+-编程
+calories: -JavaScript
 
 ## 一
 

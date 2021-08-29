@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <SCRIPT>
+    function Person(name, age, gender) {
+      this.name = name;
+      this.age = age;
+      this.gender = gender;
+    }
+
+    Person.prototype.toString = function () {
+      console.log("[name=" + this.name +"]");
+    }
+
+    var per = new Person("bob", 13, "man");
+    per.toString();
+    //toString()方法没有返回值 通过直接调用输出
+    //console.log(per);
+    function Dog(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    Dog.prototype.sayHello = function () {
+      console.log("hello!");
+      //return "hello oops!";
+      // 如果写的是console.log会有一个undefined因为没有返回值所以返回的是undefined
+    }
+    var dog1 = new Dog("kite", 2);
+    dog1.sayHello();
+    // console.log(dog1.sayHello());
+    //console.log(per.toString());
+    /*
+    * 对象的toString的方法返回值
+    */
+    //console.log(per.toString());
+    //console.log(per.__proto__.hasOwnProperty(toString()));
+    //console.log(per.__proto__.__proto__.hasOwnProperty(toString()));
+  </SCRIPT>
+</head>
+<body>
+
+</body>
+</html>
